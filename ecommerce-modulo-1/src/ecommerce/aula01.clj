@@ -1,4 +1,4 @@
-(ns ecommerce.core
+(ns ecommerce.aula01
   (:use clojure.pprint)
   (:require [datomic.api :as d]
             [ecommerce.db :as db]
@@ -12,10 +12,7 @@
 (let [computador (model/novo-produto "Computador Novo", "/computador_novo", 2500.10M)]
   (d/transact conn [computador]))
 
-(let [computador (model/novo-produto "Celular caro", "/celular", 8888.10M)]
-  (d/transact conn [computador]))
+(let [celular (model/novo-produto "Celular caro", "/celular", 8888.10M)]
+  (d/transact conn [celular]))
 
-(def db (d/db conn))
-
-(d/q '[:find ?entidade
-       :where [?entidade :produto/nome]] db)
+(db/apaga-banco)
