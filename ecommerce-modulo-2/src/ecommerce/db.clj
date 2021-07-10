@@ -170,3 +170,26 @@
 
 (defn adiciona-categorias! [conn categorias]
   (d/transact conn categorias))
+
+;; query organizada com keys produto e categoria
+(defn todos-os-nomes-de-produtos-e-categorias [db]
+  (d/q '[:find ?nome ?nome-categoria
+         :keys produto categoria
+         :where [?produto :produto/nome ?nome]
+                [?produto :produto/categoria ?categoria]
+                [?categoria :categoria/nome ?nome-categoria]] db))
+
+;; Exemplo com forward navigation
+(defn todos-os-produtos-da-categoria [db nome-da-categoria]
+  (d/q '[:find (pull ?produto [:produto/nome :produto/preco {:produto/categoria [:categoria/nome]}])
+         :in $ ?nome
+         :where [?categoria :categoria/nome ?nome]
+                [?produto :produto/categoria ?categoria]] 
+       db nome-da-categoria))
+
+;; Exemplo com backward navigation
+(defn todos-os-produtos-da-categoria [db nome-da-categoria]
+  (d/q '[:find (pull ?categoria [:categoria/nome {:produto/_categoria [:produto/nome :produto/preco]])
+         :in $ ?nome
+         :where [?categoria :categoria/nome ?nome]]
+       db nome-da-categoria))
