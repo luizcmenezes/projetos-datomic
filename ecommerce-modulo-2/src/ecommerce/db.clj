@@ -176,20 +176,37 @@
   (d/q '[:find ?nome ?nome-categoria
          :keys produto categoria
          :where [?produto :produto/nome ?nome]
-                [?produto :produto/categoria ?categoria]
-                [?categoria :categoria/nome ?nome-categoria]] db))
+         [?produto :produto/categoria ?categoria]
+         [?categoria :categoria/nome ?nome-categoria]] db))
 
 ;; Exemplo com forward navigation
 (defn todos-os-produtos-da-categoria [db nome-da-categoria]
   (d/q '[:find (pull ?produto [:produto/nome :produto/preco {:produto/categoria [:categoria/nome]}])
          :in $ ?nome
          :where [?categoria :categoria/nome ?nome]
-                [?produto :produto/categoria ?categoria]] 
+         [?produto :produto/categoria ?categoria]]
        db nome-da-categoria))
 
 ;; Exemplo com backward navigation
 (defn todos-os-produtos-da-categoria [db nome-da-categoria]
-  (d/q '[:find (pull ?categoria [:categoria/nome {:produto/_categoria [:produto/nome :produto/preco]])
+  (d/q '[:find (pull ?categoria [:categoria/nome {:produto/_categoria [:produto/nome :produto/preco]}])
          :in $ ?nome
          :where [?categoria :categoria/nome ?nome]]
        db nome-da-categoria))
+
+;; Aggregates
+(defn resumo-dos-produtos [db]
+  (d/q '[:find (min ?preco) (max ?preco) (count ?preco)
+         :with ?produto
+         :keys minimo maximo quantidade
+         :where [?produto :produto/preco ?preco]]
+       db))
+
+(defn resumo-dos-produtos-por-categoria [db]
+  (d/q '[:find ?nome-da-categoria (min ?preco) (max ?preco) (count ?preco) (sum ?preco)
+         :with ?produto
+         :keys categoria minimo maximo quantidade preco-total
+         :where [?produto :produto/preco ?preco]
+                [?produto :produto/categoria ?categoria]
+                [?categoria :categoria/nome ?nome-da-categoria]]
+       db))

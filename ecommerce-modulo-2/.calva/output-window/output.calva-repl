@@ -5,6 +5,7 @@
 ; Happy coding! ♥️
 
 ; Jacking in...
+; nREPL Connection was closed
 ; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.8.3"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.26.0"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
 ; Hooking up nREPL sessions...
 ; Connected session: clj
@@ -15,39 +16,36 @@
 ;   - `alt+up` and `alt+down` traverse up and down the REPL command history
 ;      when the cursor is after the last contents at the prompt
 ;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉ecommerce.core꞉>  ; Use `alt+enter` to evaluate
+clj꞉ecommerce.core꞉> 
 ; Jack-in done.
 clj꞉ecommerce.core꞉> 
-13
-13
-clj꞉ecommerce.core꞉> 
-nil
-clj꞉ecommerce.aula03꞉> 
-; Syntax error compiling at (aula03.clj:7:11).
-; No such var: db/abre-conexao!
-clj꞉ecommerce.aula03꞉> 
-; Syntax error compiling at (aula03.clj:7:11).
-; No such var: db/abre-conexao!
-clj꞉ecommerce.aula03꞉> 
-; Evaluating file: aula03.clj
-; Syntax error compiling at (aula03.clj:7:11).
-; No such var: db/abre-conexao!
-; Evaluation of file aula03.clj failed: class clojure.lang.Compiler$CompilerException
-
-clj꞉ecommerce.aula03꞉> 
-clj꞉ecommerce.aula03꞉> 
+; Syntax error reading source at (db.clj:192:102).
+; Unmatched delimiter: ]
+clj꞉ecommerce.aula05꞉> 
 ; Evaluating file: db.clj
-#'ecommerce.db/adiciona-categorias!
+; Syntax error reading source at (db.clj:192:102).
+; Unmatched delimiter: ]
+; Evaluation of file db.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉ecommerce.aula05꞉> 
+clj꞉ecommerce.db꞉> 
+; Evaluating file: db.clj
+#'ecommerce.db/todos-os-produtos-da-categoria
 clj꞉ecommerce.db꞉> 
 nil
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/conn
-clj꞉ecommerce.aula03꞉> 
-#<promise$settable_future$reify__6969@7f763436: 
-  {:db-before datomic.db.Db@fc993d6b,
-   :db-after datomic.db.Db@b1ba53f7,
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.aula05/conn
+clj꞉ecommerce.aula05꞉> 
+true
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.aula05/conn
+clj꞉ecommerce.aula05꞉> 
+#<promise$settable_future$reify__6969@3c8fc747: 
+  {:db-before datomic.db.Db@e063559f,
+   :db-after datomic.db.Db@f0f3ff51,
    :tx-data
-   [#datom[13194139534324 50 #inst "2021-07-10T22:11:43.425-00:00" 13194139534324 true]],
+   [#datom[13194139534312 50 #inst "2021-07-11T18:20:11.185-00:00" 13194139534312 true] #datom[72 10 :produto/nome 13194139534312 true] #datom[72 40 23 13194139534312 true] #datom[72 41 35 13194139534312 true] #datom[72 62 "O nome de um produto" 13194139534312 true] #datom[73 10 :produto/slug 13194139534312 true] #datom[73 40 23 13194139534312 true] #datom[73 41 35 13194139534312 true] #datom[73 62 "O caminho para acessar esse produto via http" 13194139534312 true] #datom[74 10 :produto/preco 13194139534312 true] #datom[74 40 61 13194139534312 true] #datom[74 41 35 13194139534312 true] #datom[74 62 "O preço de um produto com precisão monetária" 13194139534312 true] #datom[75 10 :produto/palavra-chave 13194139534312 true] #datom[75 40 23 13194139534312 true] #datom[75 41 36 13194139534312 true] #datom[76 10 :produto/id 13194139534312 true] #datom[76 40 56 13194139534312 true] 
+#datom[76 41 35 13194139534312 true] #datom[76 42 38 13194139534312 true] #datom[77 10 :produto/categoria 13194139534312 true] #datom[77 40 20 13194139534312 true] #datom[77 41 35 13194139534312 true] #datom[78 10 :categoria/nome 13194139534312 true] #datom[78 40 23 13194139534312 true] #datom[78 41 35 13194139534312 true] #datom[79 10 :categoria/id 13194139534312 true] #datom[79 40 56 13194139534312 true] #datom[79 41 35 13194139534312 true] #datom[79 42 38 13194139534312 true] #datom[0 13 72 13194139534312 true] #datom[0 13 73 13194139534312 true] #datom[0 13 74 13194139534312 true] #datom[0 13 75 13194139534312 true] #datom[0 13 76 13194139534312 true] #datom[0 13 77 13194139534312 true] #datom[0 13 78 13194139534312 true] #datom[0 13 79 13194139534312 true]],
    :tempids
    {-9223301668109598141 74,
     -9223301668109598136 79,
@@ -58,606 +56,300 @@ clj꞉ecommerce.aula03꞉> 
     -9223301668109598139 76,
     -9223301668109598143 72}}>
 nil
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/categorias
-clj꞉ecommerce.aula03꞉> 
+clj꞉ecommerce.aula05꞉> 
+; Execution error (ClassCastException) at datomic.api/transact (api.clj:105).
+; class clojure.lang.PersistentArrayMap cannot be cast to class java.util.List (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.util.List is in module java.base of loader 'bootstrap')
+clj꞉ecommerce.aula05꞉> 
+{:db-before datomic.db.Db@40419e93,
+ :db-after datomic.db.Db@f68a6dda,
+ :tx-data
+ [#datom[13194139534313 50 #inst "2021-07-11T18:21:28.477-00:00" 13194139534313 true] #datom[17592186045418 72 "Camiseta" 13194139534313 true] #datom[17592186045418 73 "/camiseta" 13194139534313 true] #datom[17592186045418 74 30M 13194139534313 true] #datom[17592186045418 76 #uuid "bcef84c0-08b1-453a-a3f5-bbc56ce7e979" 13194139534313 true] #datom[17592186045418 77 17592186045419 13194139534313 true] #datom[17592186045419 78 "Roupa" 13194139534313 true] #datom[17592186045419 79 #uuid "f1099f91-4f7a-497d-876c-414ab70fcc59" 13194139534313 true]],
+ :tempids
+ {-9223301668109598135 17592186045418,
+  -9223301668109598134 17592186045419}}
+nil
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.aula05/produtos
+clj꞉ecommerce.aula05꞉> 
 [[{:db/id 17592186045418,
-   :categoria/nome "Eletrônicos",
-   :categoria/id #uuid "0ea3e776-23f2-4c79-b6ac-894f19a858e1"}]
- [{:db/id 17592186045419,
-   :categoria/nome "Esporte",
-   :categoria/id #uuid "337a502a-e83f-4662-a371-86e3178515f0"}]]
-nil
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/produtos
-clj꞉ecommerce.aula03꞉> 
-[[{:db/id 17592186045421,
-   :produto/nome "Computador Novo",
-   :produto/slug "/computador-novo",
-   :produto/preco 2500.10M,
-   :produto/id #uuid "93e2d543-5b8b-4923-a878-4d5337fc86f1"}]
- [{:db/id 17592186045422,
-   :produto/nome "Celular caro",
-   :produto/slug "/celular",
-   :produto/preco 8888.10M,
-   :produto/id #uuid "77c56ee5-57b4-4c49-9bfc-84a11a83f609"}]
- [{:db/id 17592186045423,
-   :produto/nome "Celular barato",
-   :produto/slug "/celular-barato",
-   :produto/preco 0.1M,
-   :produto/id #uuid "aaf99a5e-25ec-4f58-8ffc-5e424a6e5990"}]
- [{:db/id 17592186045424, :produto/nome "Calculadora com 4 operações"}]
- [{:db/id 17592186045425,
-   :produto/nome "Tabuleiro de xadrez",
-   :produto/slug "/tabuleiro-de-xadrez",
+   :produto/nome "Camiseta",
+   :produto/slug "/camiseta",
    :produto/preco 30M,
-   :produto/id #uuid "44750eac-d853-4e2d-9933-16ef17658309"}]]
-nil
-clj꞉ecommerce.aula03꞉> 
-; Evaluating file: db.clj
-#'ecommerce.db/adiciona-categorias!
-clj꞉ecommerce.db꞉> 
-; Syntax error compiling at (aula03.clj:26:10).
-; Unable to resolve symbol: computador in this context
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/computador
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/celular
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/calculadora
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/celular-barato
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/xadez
-clj꞉ecommerce.aula03꞉> 
-{:db-before datomic.db.Db@b1ba53f7,
- :db-after datomic.db.Db@1a21ac86,
- :tx-data
- [#datom[13194139534325 50 #inst "2021-07-10T22:14:52.509-00:00" 13194139534325 true] #datom[17592186045430 76 #uuid "d3862d2c-82c2-41dd-b7c2-78d938c6109f" 13194139534325 true] #datom[17592186045430 72 "Computador Novo" 13194139534325 true] #datom[17592186045430 73 "/computador-novo" 13194139534325 true] #datom[17592186045430 74 2500.10M 13194139534325 true] #datom[17592186045431 76 #uuid "9cccbbcb-e065-4b04-aae6-28b264499e59" 13194139534325 true] #datom[17592186045431 72 "Celular caro" 13194139534325 true] #datom[17592186045431 73 "/celular" 13194139534325 true] #datom[17592186045431 74 8888.10M 13194139534325 true] #datom[17592186045432 76 #uuid "b2c001ec-bacf-4fb5-9830-3f9ef6bd4e79" 13194139534325 true] #datom[17592186045432 72 "Celular barato" 13194139534325 true] #datom[17592186045432 73 "/celular-barato" 13194139534325 true] #datom[17592186045432 74 0.1M 13194139534325 true] #datom[17592186045433 72 "Calculadora com 4 opera
-ções" 13194139534325 true] #datom[17592186045434 76 #uuid "48ea94c8-d523-4f25-92ca-5e0933e79b36" 13194139534325 true] #datom[17592186045434 72 "Tabuleiro de xadrez" 13194139534325 true] #datom[17592186045434 73 "/tabuleiro-de-xadrez" 13194139534325 true] #datom[17592186045434 74 30M 13194139534325 true]],
- :tempids
- {-9223301668109598135 17592186045430,
-  -9223301668109598134 17592186045431,
-  -9223301668109598133 17592186045432,
-  -9223301668109598132 17592186045433,
-  -9223301668109598131 17592186045434}}
-nil
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/produtos
-clj꞉ecommerce.aula03꞉> 
-[[{:db/id 17592186045421,
-   :produto/nome "Computador Novo",
-   :produto/slug "/computador-novo",
-   :produto/preco 2500.10M,
-   :produto/id #uuid "93e2d543-5b8b-4923-a878-4d5337fc86f1"}]
- [{:db/id 17592186045422,
-   :produto/nome "Celular caro",
-   :produto/slug "/celular",
-   :produto/preco 8888.10M,
-   :produto/id #uuid "77c56ee5-57b4-4c49-9bfc-84a11a83f609"}]
- [{:db/id 17592186045423,
-   :produto/nome "Celular barato",
-   :produto/slug "/celular-barato",
-   :produto/preco 0.1M,
-   :produto/id #uuid "aaf99a5e-25ec-4f58-8ffc-5e424a6e5990"}]
- [{:db/id 17592186045424, :produto/nome "Calculadora com 4 operações"}]
- [{:db/id 17592186045425,
-   :produto/nome "Tabuleiro de xadrez",
-   :produto/slug "/tabuleiro-de-xadrez",
-   :produto/preco 30M,
-   :produto/id #uuid "44750eac-d853-4e2d-9933-16ef17658309"}]
- [{:db/id 17592186045430,
-   :produto/nome "Computador Novo",
-   :produto/slug "/computador-novo",
-   :produto/preco 2500.10M,
-   :produto/id #uuid "d3862d2c-82c2-41dd-b7c2-78d938c6109f"}]
- [{:db/id 17592186045
-431,
-   :produto/nome "Celular caro",
-   :produto/slug "/celular",
-   :produto/preco 8888.10M,
-   :produto/id #uuid "9cccbbcb-e065-4b04-aae6-28b264499e59"}]
- [{:db/id 17592186045432,
-   :produto/nome "Celular barato",
-   :produto/slug "/celular-barato",
-   :produto/preco 0.1M,
-   :produto/id #uuid "b2c001ec-bacf-4fb5-9830-3f9ef6bd4e79"}]
- [{:db/id 17592186045433, :produto/nome "Calculadora com 4 operações"}]
- [{:db/id 17592186045434,
-   :produto/nome "Tabuleiro de xadrez",
-   :produto/slug "/tabuleiro-de-xadrez",
-   :produto/preco 30M,
-   :produto/id #uuid "48ea94c8-d523-4f25-92ca-5e0933e79b36"}]]
-nil
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.db/gera-db-adds-atribuicao-de-categoria
-clj꞉ecommerce.db꞉> 
-; Evaluating file: db.clj
-#'ecommerce.db/adiciona-categorias!
-clj꞉ecommerce.db꞉> 
-{:db-before datomic.db.Db@1a21ac86,
- :db-after datomic.db.Db@6fde7727,
- :tx-data
- [#datom[13194139534331 50 #inst "2021-07-10T22:15:58.500-00:00" 13194139534331 true] #datom[17592186045436 72 "Calculadora com 4 operações" 13194139534331 true]],
- :tempids
- {-9223301668109598130 17592186045430,
-  -9223301668109598129 17592186045431,
-  -9223301668109598128 17592186045432,
-  -9223301668109598127 17592186045436,
-  -9223301668109598126 17592186045434}}
-nil
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/produtos
-clj꞉ecommerce.aula03꞉> 
-[[{:db/id 17592186045421,
-   :produto/nome "Computador Novo",
-   :produto/slug "/computador-novo",
-   :produto/preco 2500.10M,
-   :produto/id #uuid "93e2d543-5b8b-4923-a878-4d5337fc86f1"}]
- [{:db/id 17592186045422,
-   :produto/nome "Celular caro",
-   :produto/slug "/celular",
-   :produto/preco 8888.10M,
-   :produto/id #uuid "77c56ee5-57b4-4c49-9bfc-84a11a83f609"}]
- [{:db/id 17592186045423,
-   :produto/nome "Celular barato",
-   :produto/slug "/celular-barato",
-   :produto/preco 0.1M,
-   :produto/id #uuid "aaf99a5e-25ec-4f58-8ffc-5e424a6e5990"}]
- [{:db/id 17592186045424, :produto/nome "Calculadora com 4 operações"}]
- [{:db/id 17592186045425,
-   :produto/nome "Tabuleiro de xadrez",
-   :produto/slug "/tabuleiro-de-xadrez",
-   :produto/preco 30M,
-   :produto/id #uuid "44750eac-d853-4e2d-9933-16ef17658309"}]
- [{:db/id 17592186045430,
-   :produto/nome "Computador Novo",
-   :produto/slug "/computador-novo",
-   :produto/preco 2500.10M,
-   :produto/id #uuid "d3862d2c-82c2-41dd-b7c2-78d938c6109f"}]
- [{:db/id 17592186045
-431,
-   :produto/nome "Celular caro",
-   :produto/slug "/celular",
-   :produto/preco 8888.10M,
-   :produto/id #uuid "9cccbbcb-e065-4b04-aae6-28b264499e59"}]
- [{:db/id 17592186045432,
-   :produto/nome "Celular barato",
-   :produto/slug "/celular-barato",
-   :produto/preco 0.1M,
-   :produto/id #uuid "b2c001ec-bacf-4fb5-9830-3f9ef6bd4e79"}]
- [{:db/id 17592186045433, :produto/nome "Calculadora com 4 operações"}]
- [{:db/id 17592186045434,
-   :produto/nome "Tabuleiro de xadrez",
-   :produto/slug "/tabuleiro-de-xadrez",
-   :produto/preco 30M,
-   :produto/id #uuid "48ea94c8-d523-4f25-92ca-5e0933e79b36"}]
- [{:db/id 17592186045436, :produto/nome "Calculadora com 4 operações"}]]
-nil
-clj꞉ecommerce.aula03꞉> 
-true
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/conn
-clj꞉ecommerce.aula03꞉> 
-#<promise$settable_future$reify__6969@651b10fe: 
-  {:db-before datomic.db.Db@7ae93db0,
-   :db-after datomic.db.Db@69df2e2d,
-   :tx-data
-   [#datom[13194139534312 50 #inst "2021-07-10T22:17:00.896-00:00" 13194139534312 true] #datom[72 10 :produto/nome 13194139534312 true] #datom[72 40 23 13194139534312 true] #datom[72 41 35 13194139534312 true] #datom[72 62 "O nome de um produto" 13194139534312 true] #datom[73 10 :produto/slug 13194139534312 true] #datom[73 40 23 13194139534312 true] #datom[73 41 35 13194139534312 true] #datom[73 62 "O caminho para acessar esse produto via http" 13194139534312 true] #datom[74 10 :produto/preco 13194139534312 true] #datom[74 40 61 13194139534312 true] #datom[74 41 35 13194139534312 true] #datom[74 62 "O preço de um produto com precisão monetária" 13194139534312 true] #datom[75 10 :produto/palavra-chave 13194139534312 true] #datom[75 40 23 13194139534312 true] #datom[75 41 36 13194139534312 true] #datom[76 10 :produto/id 13194139534312 true] #datom[76 40 56 13194139534312 true] 
-#datom[76 41 35 13194139534312 true] #datom[76 42 38 13194139534312 true] #datom[77 10 :produto/categoria 13194139534312 true] #datom[77 40 20 13194139534312 true] #datom[77 41 35 13194139534312 true] #datom[78 10 :categoria/nome 13194139534312 true] #datom[78 40 23 13194139534312 true] #datom[78 41 35 13194139534312 true] #datom[79 10 :categoria/id 13194139534312 true] #datom[79 40 56 13194139534312 true] #datom[79 41 35 13194139534312 true] #datom[79 42 38 13194139534312 true] #datom[0 13 72 13194139534312 true] #datom[0 13 73 13194139534312 true] #datom[0 13 74 13194139534312 true] #datom[0 13 75 13194139534312 true] #datom[0 13 76 13194139534312 true] #datom[0 13 77 13194139534312 true] #datom[0 13 78 13194139534312 true] #datom[0 13 79 13194139534312 true]],
-   :tempids
-   {-9223301668109598119 78,
-    -9223301668109598120 77,
-    -9223301668109598123 74,
-    -9223301668109598118 79,
-    -9223301668109598124 73,
-    -9223301668109598125 72,
-    -9223301668109598121 76,
-    -9223301668109598122 75}}>
-nil
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/eletronicos
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/esporte
-clj꞉ecommerce.aula03꞉> 
-{:db-before datomic.db.Db@baed5407,
- :db-after datomic.db.Db@ff129b46,
- :tx-data
- [#datom[13194139534313 50 #inst "2021-07-10T22:17:09.254-00:00" 13194139534313 true] #datom[17592186045418 79 #uuid "c43d56eb-0157-4d4c-b26a-07b84b21adca" 13194139534313 true] #datom[17592186045418 78 "Eletrônicos" 13194139534313 true] #datom[17592186045419 79 #uuid "64bfdfa0-9da7-4072-8633-07f434eaf15e" 13194139534313 true] #datom[17592186045419 78 "Esporte" 13194139534313 true]],
- :tempids
- {-9223301668109598117 17592186045418,
-  -9223301668109598116 17592186045419}}
-nil
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/categorias
-clj꞉ecommerce.aula03꞉> 
-[[{:db/id 17592186045418,
-   :categoria/nome "Eletrônicos",
-   :categoria/id #uuid "c43d56eb-0157-4d4c-b26a-07b84b21adca"}]
- [{:db/id 17592186045419,
-   :categoria/nome "Esporte",
-   :categoria/id #uuid "64bfdfa0-9da7-4072-8633-07f434eaf15e"}]]
-nil
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/computador
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/celular
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/calculadora
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/celular-barato
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/xadez
-clj꞉ecommerce.aula03꞉> 
-{:db-before datomic.db.Db@ff129b46,
- :db-after datomic.db.Db@73cd7647,
- :tx-data
- [#datom[13194139534316 50 #inst "2021-07-10T22:17:20.517-00:00" 13194139534316 true] #datom[17592186045421 76 #uuid "c98a872d-ca8e-4e63-9176-432fab1e36b1" 13194139534316 true] #datom[17592186045421 72 "Computador Novo" 13194139534316 true] #datom[17592186045421 73 "/computador-novo" 13194139534316 true] #datom[17592186045421 74 2500.10M 13194139534316 true] #datom[17592186045422 76 #uuid "fa548f17-b2cf-4dc4-8536-719fa7e232d3" 13194139534316 true] #datom[17592186045422 72 "Celular caro" 13194139534316 true] #datom[17592186045422 73 "/celular" 13194139534316 true] #datom[17592186045422 74 8888.10M 13194139534316 true] #datom[17592186045423 76 #uuid "18c89278-2ee1-4ce3-b2b4-3dd1fa07e914" 13194139534316 true] #datom[17592186045423 72 "Celular barato" 13194139534316 true] #datom[17592186045423 73 "/celular-barato" 13194139534316 true] #datom[17592186045423 74 0.1M 13194139534316 true] #datom[17592186045424 72 "Calculadora com 4 opera
-ções" 13194139534316 true] #datom[17592186045425 76 #uuid "5da1cb89-e1f7-4b40-9a94-a2d53840e108" 13194139534316 true] #datom[17592186045425 72 "Tabuleiro de xadrez" 13194139534316 true] #datom[17592186045425 73 "/tabuleiro-de-xadrez" 13194139534316 true] #datom[17592186045425 74 30M 13194139534316 true]],
- :tempids
- {-9223301668109598115 17592186045421,
-  -9223301668109598114 17592186045422,
-  -9223301668109598113 17592186045423,
-  -9223301668109598112 17592186045424,
-  -9223301668109598111 17592186045425}}
-nil
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/produtos
-clj꞉ecommerce.aula03꞉> 
-[[{:db/id 17592186045421,
-   :produto/nome "Computador Novo",
-   :produto/slug "/computador-novo",
-   :produto/preco 2500.10M,
-   :produto/id #uuid "c98a872d-ca8e-4e63-9176-432fab1e36b1"}]
- [{:db/id 17592186045422,
-   :produto/nome "Celular caro",
-   :produto/slug "/celular",
-   :produto/preco 8888.10M,
-   :produto/id #uuid "fa548f17-b2cf-4dc4-8536-719fa7e232d3"}]
- [{:db/id 17592186045423,
-   :produto/nome "Celular barato",
-   :produto/slug "/celular-barato",
-   :produto/preco 0.1M,
-   :produto/id #uuid "18c89278-2ee1-4ce3-b2b4-3dd1fa07e914"}]
- [{:db/id 17592186045424, :produto/nome "Calculadora com 4 operações"}]
- [{:db/id 17592186045425,
-   :produto/nome "Tabuleiro de xadrez",
-   :produto/slug "/tabuleiro-de-xadrez",
-   :produto/preco 30M,
-   :produto/id #uuid "5da1cb89-e1f7-4b40-9a94-a2d53840e108"}]]
-nil
-clj꞉ecommerce.aula03꞉> 
-#<promise$settable_future$reify__6969@5d686a4f: 
-  {:db-before datomic.db.Db@73cd7647,
-   :db-after datomic.db.Db@9773364a,
-   :tx-data
-   [#datom[13194139534322 50 #inst "2021-07-10T22:17:26.588-00:00" 13194139534322 true] #datom[17592186045421 77 17592186045418 13194139534322 true] #datom[17592186045422 77 17592186045418 13194139534322 true] #datom[17592186045423 77 17592186045418 13194139534322 true]],
-   :tempids {}}>
-nil
-clj꞉ecommerce.aula03꞉> 
-#<promise$settable_future$reify__6969@2a120567: 
-  {:db-before datomic.db.Db@9773364a,
-   :db-after datomic.db.Db@418bd874,
-   :tx-data
-   [#datom[13194139534323 50 #inst "2021-07-10T22:17:38.817-00:00" 13194139534323 true] #datom[17592186045425 77 17592186045419 13194139534323 true]],
-   :tempids {}}>
-nil
-clj꞉ecommerce.aula03꞉> 
-#'ecommerce.aula03/produtos
-clj꞉ecommerce.aula03꞉> 
-[[{:db/id 17592186045421,
-   :produto/nome "Computador Novo",
-   :produto/slug "/computador-novo",
-   :produto/preco 2500.10M,
-   :produto/id #uuid "c98a872d-ca8e-4e63-9176-432fab1e36b1",
-   :produto/categoria #:db{:id 17592186045418}}]
- [{:db/id 17592186045422,
-   :produto/nome "Celular caro",
-   :produto/slug "/celular",
-   :produto/preco 8888.10M,
-   :produto/id #uuid "fa548f17-b2cf-4dc4-8536-719fa7e232d3",
-   :produto/categoria #:db{:id 17592186045418}}]
- [{:db/id 17592186045423,
-   :produto/nome "Celular barato",
-   :produto/slug "/celular-barato",
-   :produto/preco 0.1M,
-   :produto/id #uuid "18c89278-2ee1-4ce3-b2b4-3dd1fa07e914",
-   :produto/categoria #:db{:id 17592186045418}}]
- [{:db/id 17592186045424, :produto/nome "Calculadora com 4 operações"}]
- [{:db/id 17592186045425,
-   :produto/nome "Tabuleiro de xadrez",
-   :produto/slug "/tabuleiro-de-xadrez",
-   :produto/preco 30M,
-   :produto/id #uuid "5da1cb89-e1f7-4b40-9a94-a2d53840e108",
+   :produto/id #uuid "bcef84c0-08b1-453a-a3f5-bbc56ce7e979",
    :produto/categoria #:db{:id 17592186045419}}]]
 nil
-clj꞉ecommerce.aula03꞉> 
-; Syntax error compiling at (aula04.clj:34:1).
-; No such namespace: db
-clj꞉ecommerce.aula04꞉> 
+clj꞉ecommerce.aula05꞉> 
+[{:produto "Camiseta", :categoria "Roupa"}]
 nil
-clj꞉ecommerce.aula04꞉> 
-true
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.aula04/conn
-clj꞉ecommerce.aula04꞉> 
-#<promise$settable_future$reify__6969@66aa0877: 
-  {:db-before datomic.db.Db@6503cf89,
-   :db-after datomic.db.Db@a2fa7ca0,
-   :tx-data
-   [#datom[13194139534312 50 #inst "2021-07-10T22:21:19.830-00:00" 13194139534312 true] #datom[72 10 :produto/nome 13194139534312 true] #datom[72 40 23 13194139534312 true] #datom[72 41 35 13194139534312 true] #datom[72 62 "O nome de um produto" 13194139534312 true] #datom[73 10 :produto/slug 13194139534312 true] #datom[73 40 23 13194139534312 true] #datom[73 41 35 13194139534312 true] #datom[73 62 "O caminho para acessar esse produto via http" 13194139534312 true] #datom[74 10 :produto/preco 13194139534312 true] #datom[74 40 61 13194139534312 true] #datom[74 41 35 13194139534312 true] #datom[74 62 "O preço de um produto com precisão monetária" 13194139534312 true] #datom[75 10 :produto/palavra-chave 13194139534312 true] #datom[75 40 23 13194139534312 true] #datom[75 41 36 13194139534312 true] #datom[76 10 :produto/id 13194139534312 true] #datom[76 40 56 13194139534312 true] 
-#datom[76 41 35 13194139534312 true] #datom[76 42 38 13194139534312 true] #datom[77 10 :produto/categoria 13194139534312 true] #datom[77 40 20 13194139534312 true] #datom[77 41 35 13194139534312 true] #datom[78 10 :categoria/nome 13194139534312 true] #datom[78 40 23 13194139534312 true] #datom[78 41 35 13194139534312 true] #datom[79 10 :categoria/id 13194139534312 true] #datom[79 40 56 13194139534312 true] #datom[79 41 35 13194139534312 true] #datom[79 42 38 13194139534312 true] #datom[0 13 72 13194139534312 true] #datom[0 13 73 13194139534312 true] #datom[0 13 74 13194139534312 true] #datom[0 13 75 13194139534312 true] #datom[0 13 76 13194139534312 true] #datom[0 13 77 13194139534312 true] #datom[0 13 78 13194139534312 true] #datom[0 13 79 13194139534312 true]],
-   :tempids
-   {-9223301668109598105 77,
-    -9223301668109598108 74,
-    -9223301668109598104 78,
-    -9223301668109598107 75,
-    -9223301668109598103 79,
-    -9223301668109598106 76,
-    -9223301668109598110 72,
-    -9223301668109598109 73}}>
-nil
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.aula04/eletronicos
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.aula04/esporte
-clj꞉ecommerce.aula04꞉> 
-{:db-before datomic.db.Db@c45cca65,
- :db-after datomic.db.Db@f5478b0d,
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.aula05/xadez
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.aula05/celular-barato
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.aula05/calculadora
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.aula05/celular
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.aula05/computador
+clj꞉ecommerce.aula05꞉> 
+{:db-before datomic.db.Db@f68a6dda,
+ :db-after datomic.db.Db@57f8feaa,
  :tx-data
- [#datom[13194139534313 50 #inst "2021-07-10T22:21:25.221-00:00" 13194139534313 true] #datom[17592186045418 79 #uuid "0591b45c-6f55-4691-bc67-515891de5ef9" 13194139534313 true] #datom[17592186045418 78 "Eletrônicos" 13194139534313 true] #datom[17592186045419 79 #uuid "6347ffae-999c-4000-b06b-70e39c4c8879" 13194139534313 true] #datom[17592186045419 78 "Esporte" 13194139534313 true]],
+ [#datom[13194139534316 50 #inst "2021-07-11T18:24:01.353-00:00" 13194139534316 true] #datom[17592186045421 76 #uuid "68bf0140-d41d-4a27-8236-e241ebae2d7a" 13194139534316 true] #datom[17592186045421 72 "Computador Novo" 13194139534316 true] #datom[17592186045421 73 "/computador-novo" 13194139534316 true] #datom[17592186045421 74 2500.10M 13194139534316 true] #datom[17592186045422 76 #uuid "fbe67fc6-ff92-475f-afeb-4eff026cf53d" 13194139534316 true] #datom[17592186045422 72 "Celular caro" 13194139534316 true] #datom[17592186045422 73 "/celular" 13194139534316 true] #datom[17592186045422 74 8888.10M 13194139534316 true] #datom[17592186045423 76 #uuid "b3a9bba1-d824-4743-a217-3af79a77ce7b" 13194139534316 true] #datom[17592186045423 72 "Celular barato" 13194139534316 true] #datom[17592186045423 73 "/celular-barato" 13194139534316 true] #datom[17592186045423 74 0.1M 13194139534316 true] #datom[17592186045424 72 "Calculadora com 4 opera
+ções" 13194139534316 true] #datom[17592186045425 76 #uuid "2fd895de-985c-4b29-bb0f-896ae0469342" 13194139534316 true] #datom[17592186045425 72 "Tabuleiro de xadrez" 13194139534316 true] #datom[17592186045425 73 "/tabuleiro-de-xadrez" 13194139534316 true] #datom[17592186045425 74 30M 13194139534316 true]],
  :tempids
- {-9223301668109598102 17592186045418,
-  -9223301668109598101 17592186045419}}
+ {-9223301668109598133 17592186045421,
+  -9223301668109598132 17592186045422,
+  -9223301668109598131 17592186045423,
+  -9223301668109598130 17592186045424,
+  -9223301668109598129 17592186045425}}
 nil
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.aula04/categorias
-clj꞉ecommerce.aula04꞉> 
-[[{:db/id 17592186045418,
+clj꞉ecommerce.aula05꞉> 
+; Syntax error compiling at (aula05.clj:28:9).
+; Unable to resolve symbol: eletronicos in this context
+clj꞉ecommerce.aula05꞉> 
+; Syntax error compiling at (aula05.clj:29:9).
+; Unable to resolve symbol: esporte in this context
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.aula05/eletronicos
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.aula05/esporte
+clj꞉ecommerce.aula05꞉> 
+#:categoria{:id #uuid "9287654b-ea2e-4fe1-af3d-e927393a182d", :nome "Esporte"}
+clj꞉ecommerce.aula05꞉> 
+#<promise$settable_future$reify__6969@3763a91d: 
+; Execution error (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: [:categoria/id #uuid "d89bd64e-aa5a-43d7-a205-c9c402647134"] in datom [[:produto/id #uuid "68bf0140-d41d-4a27-8236-e241ebae2d7a"] :produto/categoria [:categoria/id #uuid "d89bd64e-aa5a-43d7-a205-c9c402647134"]]
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.aula05/categorias
+clj꞉ecommerce.aula05꞉> 
+[[{:db/id 17592186045419,
+   :categoria/nome "Roupa",
+   :categoria/id #uuid "f1099f91-4f7a-497d-876c-414ab70fcc59"}]]
+nil
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.aula05/categorias
+clj꞉ecommerce.aula05꞉> 
+[[{:db/id 17592186045419,
+   :categoria/nome "Roupa",
+   :categoria/id #uuid "f1099f91-4f7a-497d-876c-414ab70fcc59"}]]
+nil
+clj꞉ecommerce.aula05꞉> 
+{:db-before datomic.db.Db@57f8feaa,
+ :db-after datomic.db.Db@b9aaea8c,
+ :tx-data
+ [#datom[13194139534322 50 #inst "2021-07-11T18:24:59.110-00:00" 13194139534322 true] #datom[17592186045427 79 #uuid "d89bd64e-aa5a-43d7-a205-c9c402647134" 13194139534322 true] #datom[17592186045427 78 "Eletrônicos" 13194139534322 true] #datom[17592186045428 79 #uuid "9287654b-ea2e-4fe1-af3d-e927393a182d" 13194139534322 true] #datom[17592186045428 78 "Esporte" 13194139534322 true]],
+ :tempids
+ {-9223301668109598128 17592186045427,
+  -9223301668109598127 17592186045428}}
+nil
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.aula05/categorias
+clj꞉ecommerce.aula05꞉> 
+[[{:db/id 17592186045419,
+   :categoria/nome "Roupa",
+   :categoria/id #uuid "f1099f91-4f7a-497d-876c-414ab70fcc59"}]
+ [{:db/id 17592186045427,
    :categoria/nome "Eletrônicos",
-   :categoria/id #uuid "0591b45c-6f55-4691-bc67-515891de5ef9"}]
- [{:db/id 17592186045419,
+   :categoria/id #uuid "d89bd64e-aa5a-43d7-a205-c9c402647134"}]
+ [{:db/id 17592186045428,
    :categoria/nome "Esporte",
-   :categoria/id #uuid "6347ffae-999c-4000-b06b-70e39c4c8879"}]]
+   :categoria/id #uuid "9287654b-ea2e-4fe1-af3d-e927393a182d"}]]
 nil
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.aula04/computador
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.aula04/celular
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.aula04/calculadora
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.aula04/celular-barato
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.aula04/xadez
-clj꞉ecommerce.aula04꞉> 
-{:db-before datomic.db.Db@f5478b0d,
- :db-after datomic.db.Db@33966d5d,
+clj꞉ecommerce.aula05꞉> 
+{:db-before datomic.db.Db@b9aaea8c,
+ :db-after datomic.db.Db@db9caec0,
  :tx-data
- [#datom[13194139534316 50 #inst "2021-07-10T22:21:35.044-00:00" 13194139534316 true] #datom[17592186045421 76 #uuid "e375e85d-6b46-4edc-9a88-81b6c7424323" 13194139534316 true] #datom[17592186045421 72 "Computador Novo" 13194139534316 true] #datom[17592186045421 73 "/computador-novo" 13194139534316 true] #datom[17592186045421 74 2500.10M 13194139534316 true] #datom[17592186045422 76 #uuid "40774e43-f6bc-4c25-adf9-cc2ed663d936" 13194139534316 true] #datom[17592186045422 72 "Celular caro" 13194139534316 true] #datom[17592186045422 73 "/celular" 13194139534316 true] #datom[17592186045422 74 8888.10M 13194139534316 true] #datom[17592186045423 76 #uuid "f3a2816a-547a-43fd-a7ef-4c434f1bb32f" 13194139534316 true] #datom[17592186045423 72 "Celular barato" 13194139534316 true] #datom[17592186045423 73 "/celular-barato" 13194139534316 true] #datom[17592186045423 74 0.1M 13194139534316 true] #datom[17592186045424 72 "Calculadora com 4 opera
-ções" 13194139534316 true] #datom[17592186045425 76 #uuid "a64df0be-69dc-49eb-a89c-fa8c88049861" 13194139534316 true] #datom[17592186045425 72 "Tabuleiro de xadrez" 13194139534316 true] #datom[17592186045425 73 "/tabuleiro-de-xadrez" 13194139534316 true] #datom[17592186045425 74 30M 13194139534316 true]],
+ [#datom[13194139534325 50 #inst "2021-07-11T18:25:12.168-00:00" 13194139534325 true] #datom[17592186045430 72 "Calculadora com 4 operações" 13194139534325 true]],
  :tempids
- {-9223301668109598100 17592186045421,
-  -9223301668109598099 17592186045422,
-  -9223301668109598098 17592186045423,
-  -9223301668109598097 17592186045424,
-  -9223301668109598096 17592186045425}}
+ {-9223301668109598126 17592186045421,
+  -9223301668109598125 17592186045422,
+  -9223301668109598124 17592186045423,
+  -9223301668109598123 17592186045430,
+  -9223301668109598122 17592186045425}}
 nil
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.aula04/produtos
-clj꞉ecommerce.aula04꞉> 
-[[{:db/id 17592186045421,
+clj꞉ecommerce.aula05꞉> 
+#<promise$settable_future$reify__6969@1626b41f: 
+  {:db-before datomic.db.Db@db9caec0,
+   :db-after datomic.db.Db@bcaae91,
+   :tx-data
+   [#datom[13194139534327 50 #inst "2021-07-11T18:25:14.644-00:00" 13194139534327 true] #datom[17592186045421 77 17592186045427 13194139534327 true] #datom[17592186045422 77 17592186045427 13194139534327 true] #datom[17592186045423 77 17592186045427 13194139534327 true]],
+   :tempids {}}>
+nil
+clj꞉ecommerce.aula05꞉> 
+#<promise$settable_future$reify__6969@b8655c8: 
+  {:db-before datomic.db.Db@bcaae91,
+   :db-after datomic.db.Db@a400aefc,
+   :tx-data
+   [#datom[13194139534328 50 #inst "2021-07-11T18:25:16.143-00:00" 13194139534328 true] #datom[17592186045425 77 17592186045428 13194139534328 true]],
+   :tempids {}}>
+nil
+clj꞉ecommerce.aula05꞉> 
+[[{:db/id 17592186045418,
+   :produto/nome "Camiseta",
+   :produto/slug "/camiseta",
+   :produto/preco 30M,
+   :produto/id #uuid "bcef84c0-08b1-453a-a3f5-bbc56ce7e979",
+   :produto/categoria #:db{:id 17592186045419}}]
+ [{:db/id 17592186045421,
    :produto/nome "Computador Novo",
    :produto/slug "/computador-novo",
    :produto/preco 2500.10M,
-   :produto/id #uuid "e375e85d-6b46-4edc-9a88-81b6c7424323"}]
+   :produto/id #uuid "68bf0140-d41d-4a27-8236-e241ebae2d7a",
+   :produto/categoria #:db{:id 17592186045427}}]
  [{:db/id 17592186045422,
    :produto/nome "Celular caro",
    :produto/slug "/celular",
    :produto/preco 8888.10M,
-   :produto/id #uuid "40774e43-f6bc-4c25-adf9-cc2ed663d936"}]
+   :produto/id #uuid "fbe67fc6-ff92-475f-afeb-4eff026cf53d",
+   :produto/categoria #:db{:id 17592186045427}}]
  [{:db/id 17592186045423,
    :produto/nome "Celular barato",
    :produto/slug "/celular-barato",
    :produto/preco 0.1M,
-   :produto/id #uuid "f3a2816a-547a-43fd-a7ef-4c434f1bb32f"}]
+   :produto/id #uuid "b3a9bba1-d824-4743-a217-3af79a77ce7b",
+   :produto/categoria #:db{:id 17592186045427}}]
  [{:db/id 17592186045424, :produto/nome "Calculadora com 4 operações"}]
  [{:db/id 17592186045425,
-   :produto/nome "Tabuleiro de xadrez",
+   :produto/no
+me "Tabuleiro de xadrez",
    :produto/slug "/tabuleiro-de-xadrez",
    :produto/preco 30M,
-   :produto/id #uuid "a64df0be-69dc-49eb-a89c-fa8c88049861"}]]
+   :produto/id #uuid "2fd895de-985c-4b29-bb0f-896ae0469342",
+   :produto/categoria #:db{:id 17592186045428}}]
+ [{:db/id 17592186045430, :produto/nome "Calculadora com 4 operações"}]]
 nil
-clj꞉ecommerce.aula04꞉> 
-#<promise$settable_future$reify__6969@64274805: 
-  {:db-before datomic.db.Db@33966d5d,
-   :db-after datomic.db.Db@8b5e234b,
-   :tx-data
-   [#datom[13194139534322 50 #inst "2021-07-10T22:21:41.811-00:00" 13194139534322 true] #datom[17592186045421 77 17592186045418 13194139534322 true] #datom[17592186045422 77 17592186045418 13194139534322 true] #datom[17592186045423 77 17592186045418 13194139534322 true]],
-   :tempids {}}>
-nil
-clj꞉ecommerce.aula04꞉> 
-#<promise$settable_future$reify__6969@7e28ac4e: 
-  {:db-before datomic.db.Db@8b5e234b,
-   :db-after datomic.db.Db@a5e5961e,
-   :tx-data
-   [#datom[13194139534323 50 #inst "2021-07-10T22:21:42.909-00:00" 13194139534323 true] #datom[17592186045425 77 17592186045419 13194139534323 true]],
-   :tempids {}}>
-nil
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.aula04/produtos
-clj꞉ecommerce.aula04꞉> 
-[[{:db/id 17592186045421,
-   :produto/nome "Computador Novo",
-   :produto/slug "/computador-novo",
-   :produto/preco 2500.10M,
-   :produto/id #uuid "e375e85d-6b46-4edc-9a88-81b6c7424323",
-   :produto/categoria #:db{:id 17592186045418}}]
- [{:db/id 17592186045422,
-   :produto/nome "Celular caro",
-   :produto/slug "/celular",
-   :produto/preco 8888.10M,
-   :produto/id #uuid "40774e43-f6bc-4c25-adf9-cc2ed663d936",
-   :produto/categoria #:db{:id 17592186045418}}]
- [{:db/id 17592186045423,
-   :produto/nome "Celular barato",
-   :produto/slug "/celular-barato",
-   :produto/preco 0.1M,
-   :produto/id #uuid "f3a2816a-547a-43fd-a7ef-4c434f1bb32f",
-   :produto/categoria #:db{:id 17592186045418}}]
- [{:db/id 17592186045424, :produto/nome "Calculadora com 4 operações"}]
- [{:db/id 17592186045425,
-   :produto/nome "Tabuleiro de xadrez",
-   :produto/slug "/tabuleiro-de-xadrez",
-   :produto/preco 30M,
-   :produto/id #uuid "a64df0be-69dc-49eb-a89c-fa8c88049861",
-   :produto/categoria #:db{:id 17592186045419}}]]
-nil
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.db/todos-os-nomes-de-produtos-e-categorias
-clj꞉ecommerce.db꞉> 
-#{["Tabuleiro de xadrez"] ["Calculadora com 4 operações"] ["Celular barato"] ["Celular caro"] ["Computador Novo"]}
-nil
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.db/todos-os-nomes-de-produtos-e-categorias
-clj꞉ecommerce.db꞉> 
-#{["Celular caro" 17592186045418] ["Computador Novo" 17592186045418] ["Celular barato" 17592186045418] ["Tabuleiro de xadrez" 17592186045419]}
-nil
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.db/todos-os-nomes-de-produtos-e-categorias
-clj꞉ecommerce.db꞉> 
-#{["Celular caro" "Eletrônicos"] ["Celular barato" "Eletrônicos"] ["Tabuleiro de xadrez" "Esporte"] ["Computador Novo" "Eletrônicos"]}
-nil
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.db/todos-os-nomes-de-produtos-e-categorias
-clj꞉ecommerce.db꞉> 
+clj꞉ecommerce.aula05꞉> 
 [{:produto "Celular caro", :categoria "Eletrônicos"}
  {:produto "Celular barato", :categoria "Eletrônicos"}
+ {:produto "Camiseta", :categoria "Roupa"}
  {:produto "Tabuleiro de xadrez", :categoria "Esporte"}
  {:produto "Computador Novo", :categoria "Eletrônicos"}]
 nil
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.db/todos-os-nomes-de-produtos-e-categorias
-clj꞉ecommerce.db꞉> 
-[{:produto "Celular caro", :categoria "Eletrônicos"}
- {:produto "Celular barato", :categoria "Eletrônicos"}
- {:produto "Celular caro", :categoria "Esporte"}
- {:produto "Celular barato", :categoria "Esporte"}
- {:produto "Tabuleiro de xadrez", :categoria "Eletrônicos"}
- {:produto "Tabuleiro de xadrez", :categoria "Esporte"}
- {:produto "Computador Novo", :categoria "Eletrônicos"}
- {:produto "Computador Novo", :categoria "Esporte"}
- {:produto "Calculadora com 4 operações", :categoria "Esporte"}
- {:produto "Calculadora com 4 operações", :categoria "Eletrônicos"}]
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.aula05/esporte-id
+clj꞉ecommerce.aula05꞉> 
+#uuid "9287654b-ea2e-4fe1-af3d-e927393a182d"
+clj꞉ecommerce.aula05꞉> 
+{:db-before datomic.db.Db@a400aefc,
+ :db-after datomic.db.Db@ed00bcc5,
+ :tx-data
+ [#datom[13194139534329 50 #inst "2021-07-11T18:28:47.701-00:00" 13194139534329 true] #datom[17592186045434 72 "Dama" 13194139534329 true] #datom[17592186045434 73 "/dama" 13194139534329 true] #datom[17592186045434 74 15M 13194139534329 true] #datom[17592186045434 76 #uuid "10288ea8-bedf-486d-99e9-09ac10a31b08" 13194139534329 true] #datom[17592186045434 77 17592186045428 13194139534329 true]],
+ :tempids {-9223301668109598121 17592186045434}}
 nil
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.db/todos-os-nomes-de-produtos-e-categorias
-clj꞉ecommerce.db꞉> 
+clj꞉ecommerce.aula05꞉> 
+[[{:db/id 17592186045418,
+   :produto/nome "Camiseta",
+   :produto/slug "/camiseta",
+   :produto/preco 30M,
+   :produto/id #uuid "bcef84c0-08b1-453a-a3f5-bbc56ce7e979",
+   :produto/categoria #:db{:id 17592186045419}}]
+ [{:db/id 17592186045421,
+   :produto/nome "Computador Novo",
+   :produto/slug "/computador-novo",
+   :produto/preco 2500.10M,
+   :produto/id #uuid "68bf0140-d41d-4a27-8236-e241ebae2d7a",
+   :produto/categoria #:db{:id 17592186045427}}]
+ [{:db/id 17592186045422,
+   :produto/nome "Celular caro",
+   :produto/slug "/celular",
+   :produto/preco 8888.10M,
+   :produto/id #uuid "fbe67fc6-ff92-475f-afeb-4eff026cf53d",
+   :produto/categoria #:db{:id 17592186045427}}]
+ [{:db/id 17592186045423,
+   :produto/nome "Celular barato",
+   :produto/slug "/celular-barato",
+   :produto/preco 0.1M,
+   :produto/id #uuid "b3a9bba1-d824-4743-a217-3af79a77ce7b",
+   :produto/categoria #:db{:id 17592186045427}}]
+ [{:db/id 17592186045424, :produto/nome "Calculadora com 4 operações"}]
+ [{:db/id 17592186045425,
+   :produto/no
+me "Tabuleiro de xadrez",
+   :produto/slug "/tabuleiro-de-xadrez",
+   :produto/preco 30M,
+   :produto/id #uuid "2fd895de-985c-4b29-bb0f-896ae0469342",
+   :produto/categoria #:db{:id 17592186045428}}]
+ [{:db/id 17592186045430, :produto/nome "Calculadora com 4 operações"}]
+ [{:db/id 17592186045434,
+   :produto/nome "Dama",
+   :produto/slug "/dama",
+   :produto/preco 15M,
+   :produto/id #uuid "10288ea8-bedf-486d-99e9-09ac10a31b08",
+   :produto/categoria #:db{:id 17592186045428}}]]
+nil
+clj꞉ecommerce.aula05꞉> 
 [{:produto "Celular caro", :categoria "Eletrônicos"}
  {:produto "Celular barato", :categoria "Eletrônicos"}
+ {:produto "Dama", :categoria "Esporte"}
+ {:produto "Camiseta", :categoria "Roupa"}
  {:produto "Tabuleiro de xadrez", :categoria "Esporte"}
  {:produto "Computador Novo", :categoria "Eletrônicos"}]
 nil
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.db/todos-os-produtos-da-categoria
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.db/resumo-dos-produtos
 clj꞉ecommerce.db꞉> 
-#'ecommerce.db/todos-os-produtos-da-categoria
+; Execution error (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/invalid-data-source Nil or missing data source. Did you forget to pass a database argument?
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.db/resumo-dos-produtos
 clj꞉ecommerce.db꞉> 
-; Execution error (IllegalArgumentException) at datomic.query/validate-query (query.clj:318).
-; Argument [*] in :find is not a variable
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.db/todos-os-produtos-da-categoria
+[[0.1M 8888.10M]]
+nil
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.db/resumo-dos-produtos
 clj꞉ecommerce.db꞉> 
-; Execution error (IllegalArgumentException) at datomic.query/validate-query (query.clj:318).
-; Argument [*] in :find is not a variable
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.db/todos-os-produtos-da-categoria
+[{:minimo 0.1M, :maximo 8888.10M, :quantidade 5}]
+nil
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.db/resumo-dos-produtos
 clj꞉ecommerce.db꞉> 
-[[{:db/id 17592186045421,
-   :produto/nome "Computador Novo",
-   :produto/slug "/computador-novo",
-   :produto/preco 2500.10M,
-   :produto/id #uuid "e375e85d-6b46-4edc-9a88-81b6c7424323",
-   :produto/categoria #:db{:id 17592186045418}}]
- [{:db/id 17592186045422,
-   :produto/nome "Celular caro",
-   :produto/slug "/celular",
-   :produto/preco 8888.10M,
-   :produto/id #uuid "40774e43-f6bc-4c25-adf9-cc2ed663d936",
-   :produto/categoria #:db{:id 17592186045418}}]
- [{:db/id 17592186045423,
-   :produto/nome "Celular barato",
-   :produto/slug "/celular-barato",
-   :produto/preco 0.1M,
-   :produto/id #uuid "f3a2816a-547a-43fd-a7ef-4c434f1bb32f",
-   :produto/categoria #:db{:id 17592186045418}}]]
+[{:minimo 0.1M, :maximo 8888.10M, :quantidade 5}]
 nil
-clj꞉ecommerce.aula04꞉> 
-[[{:db/id 17592186045425,
-   :produto/nome "Tabuleiro de xadrez",
-   :produto/slug "/tabuleiro-de-xadrez",
-   :produto/preco 30M,
-   :produto/id #uuid "a64df0be-69dc-49eb-a89c-fa8c88049861",
-   :produto/categoria #:db{:id 17592186045419}}]]
-nil
-clj꞉ecommerce.aula04꞉> 
-[[{:db/id 17592186045425,
-   :produto/nome "Tabuleiro de xadrez",
-   :produto/slug "/tabuleiro-de-xadrez",
-   :produto/preco 30M,
-   :produto/id #uuid "a64df0be-69dc-49eb-a89c-fa8c88049861",
-   :produto/categoria #:db{:id 17592186045419}}]]
-nil
-clj꞉ecommerce.aula04꞉> 
-[[{:db/id 17592186045421,
-   :produto/nome "Computador Novo",
-   :produto/slug "/computador-novo",
-   :produto/preco 2500.10M,
-   :produto/id #uuid "e375e85d-6b46-4edc-9a88-81b6c7424323",
-   :produto/categoria #:db{:id 17592186045418}}]
- [{:db/id 17592186045422,
-   :produto/nome "Celular caro",
-   :produto/slug "/celular",
-   :produto/preco 8888.10M,
-   :produto/id #uuid "40774e43-f6bc-4c25-adf9-cc2ed663d936",
-   :produto/categoria #:db{:id 17592186045418}}]
- [{:db/id 17592186045423,
-   :produto/nome "Celular barato",
-   :produto/slug "/celular-barato",
-   :produto/preco 0.1M,
-   :produto/id #uuid "f3a2816a-547a-43fd-a7ef-4c434f1bb32f",
-   :produto/categoria #:db{:id 17592186045418}}]]
-nil
-clj꞉ecommerce.aula04꞉> 
-#'ecommerce.db/todos-os-produtos-da-categoria
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.db/resumo-dos-produtos
 clj꞉ecommerce.db꞉> 
-[[#:produto{:nome "Computador Novo",
-            :preco 2500.10M,
-            :categoria #:categoria{:nome "Eletrônicos"}}]
- [#:produto{:nome "Celular caro",
-            :preco 8888.10M,
-            :categoria #:categoria{:nome "Eletrônicos"}}]
- [#:produto{:nome "Celular barato",
-            :preco 0.1M,
-            :categoria #:categoria{:nome "Eletrônicos"}}]]
+[{:minimo 0.1M, :maximo 8888.10M, :quantidade 6}]
 nil
-clj꞉ecommerce.aula04꞉> 
-; Syntax error reading source at (REPL:192:71).
-; Map literal must contain an even number of forms
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.db/resumo-dos-produtos
 clj꞉ecommerce.db꞉> 
-[[#:produto{:nome "Computador Novo",
-            :preco 2500.10M,
-            :categoria #:categoria{:nome "Eletrônicos"}}]
- [#:produto{:nome "Celular caro",
-            :preco 8888.10M,
-            :categoria #:categoria{:nome "Eletrônicos"}}]
- [#:produto{:nome "Celular barato",
-            :preco 0.1M,
-            :categoria #:categoria{:nome "Eletrônicos"}}]]
+#'ecommerce.db/resumo-dos-produtos-por-categoria
+clj꞉ecommerce.db꞉> 
+#'ecommerce.db/resumo-dos-produtos-por-categoria
+clj꞉ecommerce.db꞉> 
+[{:categoria 17592186045419, :minimo 30M, :maximo 30M, :total 1}
+ {:categoria 17592186045427, :minimo 0.1M, :maximo 8888.10M, :total 3}
+ {:categoria 17592186045428, :minimo 15M, :maximo 30M, :total 2}]
 nil
-clj꞉ecommerce.aula04꞉> 
-[[#:produto{:nome "Tabuleiro de xadrez",
-            :preco 30M,
-            :categoria #:categoria{:nome "Esporte"}}]]
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.db/resumo-dos-produtos-por-categoria
+clj꞉ecommerce.db꞉> 
+[{:categoria "Eletrônicos", :minimo 0.1M, :maximo 8888.10M, :total 3}
+ {:categoria "Esporte", :minimo 15M, :maximo 30M, :total 2}
+ {:categoria "Roupa", :minimo 30M, :maximo 30M, :total 1}]
 nil
-clj꞉ecommerce.aula04꞉> 
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.db/resumo-dos-produtos-por-categoria
+clj꞉ecommerce.db꞉> 
+[{:categoria "Eletrônicos",
+  :minimo 0.1M,
+  :maximo 8888.10M,
+  :total 3,
+  :total-preco 11388.30M}
+ {:categoria "Esporte",
+  :minimo 15M,
+  :maximo 30M,
+  :total 2,
+  :total-preco 45M}
+ {:categoria "Roupa",
+  :minimo 30M,
+  :maximo 30M,
+  :total 1,
+  :total-preco 30M}]
+nil
+clj꞉ecommerce.aula05꞉> 
+#'ecommerce.db/resumo-dos-produtos
+clj꞉ecommerce.db꞉> 
+#'ecommerce.db/resumo-dos-produtos-por-categoria
+clj꞉ecommerce.db꞉> 
